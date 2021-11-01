@@ -10,6 +10,11 @@ third = ["Случайное недопонимание может повлеч�
 def get_text_messages(message):
     if message.text == "/start":
         bot.send_message(message.from_user.id, "Привет, я расскажу тебе самый точный гороскоп на сегодня.")
+#l = ['Овен', 'Телец', 'Близнецы', 'Рак', 'Лев', 'Дева', 'Весы', 'Скорпион', 'Стрелец', 'Козерог', 'Водолей', 'Рыбы' ]
+#keyboard = types.InlineKeyboardMarkup()
+#backbutton = types.InlineKeyboardButton(text="Back", callback_data="MainMenu")
+#button_list = [types.InlineKeyboardButton(text=x, callback_data=x) for x in l]
+#keyboard.add(*button_list, backbutton)
         keyboard = types.InlineKeyboardMarkup()
         key_oven = types.InlineKeyboardButton(text='Овен', callback_data='zodiac')
         keyboard.add(key_oven)
