@@ -10,36 +10,10 @@ third = ["Случайное недопонимание может повлеч�
 def get_text_messages(message):
     if message.text == "/start":
         bot.send_message(message.from_user.id, "Привет, я расскажу тебе самый точный гороскоп на сегодня.")
-#l = ['Овен', 'Телец', 'Близнецы', 'Рак', 'Лев', 'Дева', 'Весы', 'Скорпион', 'Стрелец', 'Козерог', 'Водолей', 'Рыбы' ]
-#keyboard = types.InlineKeyboardMarkup()
-#backbutton = types.InlineKeyboardButton(text="Back", callback_data="MainMenu")
-#button_list = [types.InlineKeyboardButton(text=x, callback_data=x) for x in l]
-#keyboard.add(*button_list, backbutton)
         keyboard = types.InlineKeyboardMarkup()
-        key_oven = types.InlineKeyboardButton(text='Овен', callback_data='zodiac')
-        keyboard.add(key_oven)
-        key_telec = types.InlineKeyboardButton(text='Телец', callback_data='zodiac')
-        keyboard.add(key_telec)
-        key_bliznecy = types.InlineKeyboardButton(text='Близнецы', callback_data='zodiac')
-        keyboard.add(key_bliznecy)
-        key_rak = types.InlineKeyboardButton(text='Рак', callback_data='zodiac')
-        keyboard.add(key_rak)
-        key_lev = types.InlineKeyboardButton(text='Лев', callback_data='zodiac')
-        keyboard.add(key_lev)
-        key_deva = types.InlineKeyboardButton(text='Дева', callback_data='zodiac')
-        keyboard.add(key_deva)
-        key_vesy = types.InlineKeyboardButton(text='Весы', callback_data='zodiac')
-        keyboard.add(key_vesy)
-        key_scorpion = types.InlineKeyboardButton(text='Скорпион', callback_data='zodiac')
-        keyboard.add(key_scorpion)
-        key_strelec = types.InlineKeyboardButton(text='Стрелец', callback_data='zodiac')
-        keyboard.add(key_strelec)
-        key_kozerog = types.InlineKeyboardButton(text='Козерог', callback_data='zodiac')
-        keyboard.add(key_kozerog)
-        key_vodoley = types.InlineKeyboardButton(text='Водолей', callback_data='zodiac')
-        keyboard.add(key_vodoley)
-        key_ryby = types.InlineKeyboardButton(text='Рыбы', callback_data='zodiac')
-        keyboard.add(key_ryby)
+        l = ['Овен', 'Телец', 'Близнецы', 'Рак', 'Лев', 'Дева', 'Весы', 'Скорпион', 'Стрелец', 'Козерог', 'Водолей', 'Рыбы' ]
+        button_list = [types.InlineKeyboardButton(text=x, callback_data='zodiac') for x in l]
+        keyboard.add(*button_list)
         bot.send_message(message.from_user.id, text='Выбери свой знак зодиака', reply_markup=keyboard)
     elif message.text == "/help":
         bot.send_message(message.from_user.id, "Напиши /start")
