@@ -9,7 +9,7 @@ third = ["Случайное недопонимание может повлеч�
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
     if message.text == "/start":
-        bot.send_message(message.from_user.id, "Привет, я расскажу тебе самый точный гороскоп на сегодня.")
+        bot.send_message(message.from_user.id, "Привет! Я расскажу тебе самый точный гороскоп на сегодня.")
         keyboard = types.InlineKeyboardMarkup()
         l = ['Овен', 'Телец', 'Близнецы', 'Рак', 'Лев', 'Дева', 'Весы', 'Скорпион', 'Стрелец', 'Козерог', 'Водолей', 'Рыбы' ]
         button_list = [types.InlineKeyboardButton(text=x, callback_data='zodiac') for x in l]
